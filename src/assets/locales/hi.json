@@ -3,7 +3,6 @@
   "lang_english": "English",
   "lang_hindi": "हिंदी",
   "lang_marathi": "मराठी",
-
   "search_placeholder": "खोजें",
   "footer_data": "डेटा",
   "footer_code": "कोड",
@@ -20,14 +19,13 @@
   "no_officials": "अधिकारियों की कोई जानकारी उपलब्ध नहीं है",
   "latitude_longitude": "अक्षांश/देशांतर",
   "copied_to_clipboard": "कॉपी झालेले!",
-
   "dept_bmc_wards": "BMC वार्ड",
   "dept_bmc_zones": "BMC जोन",
   "dept_mseb_division": "MSEB डिवीजन",
-
   "contact_information": "संपर्क जानकारी",
   "contact_helpline": "हेल्पलाइन",
   "contact_email": "ईमेल",
   "contact_call_center": "कॉल सेंटर",
-  "contact_public_relations_officer": "जनसंपर्क अधिकारी"
+  "contact_public_relations_officer": "जनसंपर्क अधिकारी",
+  "contact_website": "वेबसाइट"
 }

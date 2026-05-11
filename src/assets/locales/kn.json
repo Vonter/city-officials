@@ -3,7 +3,6 @@
   "lang_kannada": "ಕನ್ನಡ",
   "lang_hindi": "हिंदी",
   "lang_marathi": "मराठी",
-
   "search_placeholder": "ಹುಡುಕು",
   "footer_data": "ಡೇಟಾ",
   "footer_code": "ಕೋಡ್",
@@ -22,11 +21,9 @@
   "copied_to_clipboard": "ನಕಲಿಸಲಾಗಿದೆ!",
   "share": "ಹಂಚಿಕೊಳ್ಳಿ",
   "link_copied": "ಲಿಂಕ್ ನಕಲಿಸಲಾಗಿದೆ!",
-
   "office_location": "ಕಚೇರಿ ಸ್ಥಳ",
   "police_station": "ಪೊಲೀಸ್ ಠಾಣೆ",
   "traffic_police_station": "ಸಂಚಾರ ಪೊಲೀಸ್ ಠಾಣೆ",
-
   "contact_information": "ಸಂಪರ್ಕ ಮಾಹಿತಿ",
   "contact_helpline": "ಸಹಾಯ ಸಂಪರ್ಕ",
   "contact_email": "ಇಮೇಲ್",
@@ -38,5 +35,6 @@
   "contact_twitter": "X (Twitter)",
   "contact_facebook": "Facebook",
   "contact_instagram": "Instagram",
+  "contact_website": "ವೆಬ್‌ಸೈಟ್",
   "contact_grievance_redressal": "ಸುರಕ್ಷತಾ ದೂರುಗಳು"
 }

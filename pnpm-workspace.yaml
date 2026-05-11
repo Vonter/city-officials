@@ -1,0 +1,5 @@
+allowBuilds:
+  es5-ext: true
+  esbuild: true
+  svelte-preprocess: true
+  workerd: true

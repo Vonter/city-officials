@@ -3,7 +3,6 @@
   "lang_kannada": "ಕನ್ನಡ",
   "lang_hindi": "हिंदी",
   "lang_marathi": "मराठी",
-
   "search_placeholder": "Search",
   "footer_data": "Data",
   "footer_code": "Code",
@@ -22,11 +21,9 @@
   "copied_to_clipboard": "Copied!",
   "share": "Share",
   "link_copied": "Link copied!",
-
   "office_location": "Office Location",
   "police_station": "Police Station",
   "traffic_police_station": "Traffic Police Station",
-
   "contact_information": "Contact Information",
   "contact_helpline": "Helpline",
   "contact_email": "Email",
@@ -38,5 +35,6 @@
   "contact_twitter": "X (Twitter)",
   "contact_facebook": "Facebook",
   "contact_instagram": "Instagram",
+  "contact_website": "Website",
   "contact_grievance_redressal": "Safety Related Complaints"
 }

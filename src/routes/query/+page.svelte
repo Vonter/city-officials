@@ -110,9 +110,9 @@
       };
 
       // Initialize all boundary columns with empty official details
-      Object.values(layers).forEach(def => {
-        row[def.name] = '';
-        row[`${def.name}_official`] = {
+      Object.keys(layers).forEach(key => {
+        row[key] = '';
+        row[`${key}_official`] = {
           officials: []
         };
       });
@@ -120,27 +120,25 @@
       // Fill in found boundaries and their officials
       result.containingBoundaries.forEach(boundary => {
         const id = boundary.properties?.['id'];
-        const boundaryDef = layers[id as keyof typeof layers];
-        if (boundaryDef) {
-          const boundaryNamecol = boundary.properties?.['namecol'] || '-';
-          const boundaryDisplayName =
-            boundary.properties?.['wardName'] || boundaryNamecol;
-          row[boundaryDef.name] = boundaryDisplayName;
+        if (!id || !layers[id as keyof typeof layers]) return;
+        const boundaryNamecol = boundary.properties?.['namecol'] || '-';
+        const boundaryDisplayName =
+          boundary.properties?.['wardName'] || boundaryNamecol;
+        row[id] = boundaryDisplayName;
 
-          // Find and add officials
-          const officialsDetails = officials.filter(
-            o => o.Area === boundaryNamecol && o.Department === id
-          );
-          if (officialsDetails.length > 0) {
-            row[`${boundaryDef.name}_official`] = {
-              officials: officialsDetails.map(official => ({
-                name: official.Name,
-                designation: official.Designation,
-                email: official['E-Mail'],
-                phone: official.Phone
-              }))
-            };
-          }
+        // Find and add officials
+        const officialsDetails = officials.filter(
+          o => o.Area === boundaryNamecol && o.Department === id
+        );
+        if (officialsDetails.length > 0) {
+          row[`${id}_official`] = {
+            officials: officialsDetails.map(official => ({
+              name: official.Name,
+              designation: official.Designation,
+              email: official['E-Mail'],
+              phone: official.Phone
+            }))
+          };
         }
       });
 
@@ -155,7 +153,7 @@
 
     // Define headers - one for each boundary type
     const headers = [
-      ...Object.values(layers).map(layer => layer.name),
+      ...Object.keys(layers),
       'Map Link'
     ];
 
@@ -377,11 +375,11 @@
                     >
                       Coordinates
                     </th>
-                    {#each Object.values(layers) as boundary}
+                    {#each Object.keys(layers) as key}
                       <th
                         class="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider sticky top-0"
                       >
-                        {boundary.name}
+                        {key}
                       </th>
                     {/each}
                     <th
@@ -397,22 +395,22 @@
                       <td class="px-4 py-3 text-sm font-mono text-gray-900">
                         {row.coordinates}
                       </td>
-                      {#each Object.values(layers) as boundary}
+                      {#each Object.keys(layers) as key}
                         <td class="px-4 py-3 text-sm text-gray-700">
                           <div class="space-y-2">
                             <div class="font-medium">
-                              {row[boundary.name] || '—'}
+                              {row[key] || '—'}
                             </div>
-                            {#if typeof row[`${boundary.name}_official`] === 'object' && (row[`${boundary.name}_official`] as Officials).officials?.length > 0}
+                            {#if typeof row[`${key}_official`] === 'object' && (row[`${key}_official`] as Officials).officials?.length > 0}
                               <div
                                 class="pl-2 border-l-2 border-gray-200 space-y-3"
                               >
-                                {#each (row[`${boundary.name}_official`] as Officials).officials as official, idx}
+                                {#each (row[`${key}_official`] as Officials).officials as official, idx}
                                   <div class="space-y-1">
                                     {#if official.name}
                                       <div class="font-medium text-gray-900">
                                         {official.name}
-                                        {#if (row[`${boundary.name}_official`] as Officials).officials.length > 1}
+                                        {#if (row[`${key}_official`] as Officials).officials.length > 1}
                                           <span
                                             class="text-xs text-gray-400 ml-1"
                                           >
@@ -442,7 +440,7 @@
                                       </div>
                                     {/if}
                                   </div>
-                                  {#if idx < (row[`${boundary.name}_official`] as Officials).officials.length - 1}
+                                  {#if idx < (row[`${key}_official`] as Officials).officials.length - 1}
                                     <div class="border-t border-gray-100"></div>
                                   {/if}
                                 {/each}

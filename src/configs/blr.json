@@ -979,7 +979,7 @@
       "icon": "🏗️",
       "group": "bda",
       "websiteUrl": "https://bdakarnataka.in/",
-      "geodataUrl": "https://www.bdakarnataka.in/api/media/bda-layouts/pdf_press_release/BDA_ZONE_MAP_1772690718245_827cc2bb.pdf",
+      "geodataUrl": "https://bdakarnataka.in/api/media/bda-layouts/pdf_press_release/BDA_ZONE_MAP_1772690718245_827cc2bb.pdf",
       "descriptionKey": "dept_bda_desc",
       "color": "#8b5cf6",
       "darkColor": "#ddd6fe",
@@ -987,14 +987,66 @@
         {
           "designation": "Chairman",
           "designationRegional": "ಅಧ್ಯಕ್ಷರು",
-          "name": "N A Haris",
-          "nameRegional": "ಎನ್ ಎ ಹ್ಯಾರಿಸ್"
+          "name": "N A Haris, MLA",
+          "nameRegional": "ಎನ್ ಎ ಹ್ಯಾರಿಸ್, ಶಾಸಕರು",
+          "phone": "",
+          "email": ""
         },
         {
           "designation": "Commissioner",
           "designationRegional": "ಆಯುಕ್ತರು",
-          "name": "Major Manivannan P",
-          "nameRegional": "ಮೇಜರ್ ಮಣಿವಣ್ಣನ್ ಪಿ"
+          "name": "Major Manivannan P, IAS",
+          "nameRegional": "ಮೇಜರ್ ಮಣಿವಣ್ಣನ್ ಪಿ, ಐಎಎಸ್",
+          "phone": "",
+          "email": ""
+        },
+        {
+          "designation": "Chief Accounts Officer",
+          "designationRegional": "ಮುಖ್ಯ ಲೆಕ್ಕಪತ್ರ ಅಧಿಕಾರಿ",
+          "name": "Srinivas Murthy",
+          "nameRegional": "ಶ್ರೀನಿವಾಸ ಮೂರ್ತಿ",
+          "phone": "",
+          "email": ""
+        },
+        {
+          "designation": "Secretary",
+          "designationRegional": "ಕಾರ್ಯದರ್ಶಿ",
+          "name": "C L Shiva Kumar",
+          "nameRegional": "ಸಿ ಎಲ್ ಶಿವ ಕುಮಾರ್",
+          "phone": "",
+          "email": ""
+        },
+        {
+          "designation": "Deputy Commissioner (Land Acquisition)",
+          "designationRegional": "ಉಪ ಆಯುಕ್ತರು (ಭೂಸ್ವಾಧೀನ)",
+          "name": "Suma R",
+          "nameRegional": "ಸುಮಾ ಆರ್",
+          "phone": "",
+          "email": ""
+        },
+        {
+          "designation": "Superintendent Of Police",
+          "designationRegional": "ಆರಕ್ಷಕ ಅಧೀಕ್ಷಕರು",
+          "name": "K S Nagaraja",
+          "nameRegional": "ಕೆ ಎಸ್ ನಾಗರಾಜ",
+          "phone": "",
+          "email": ""
+        },
+        {
+          "designation": "Public Relation Officer",
+          "designationRegional": "ಸಾರ್ವಜನಿಕ ಸಂಪರ್ಕ ಅಧಿಕಾರಿ",
+          "name": "Nagaraj Pujar",
+          "nameRegional": "ನಾಗರಾಜ್ ಪೂಜಾರ್",
+          "phone": "",
+          "email": ""
+        },
+        {
+          "designation": "Chief Law Officer",
+          "designationRegional": "ಮುಖ್ಯ ಕಾನೂನು ಅಧಿಕಾರಿ",
+          "name": "G K V Murthy",
+          "nameRegional": "ಜಿ ಕೆ ವಿ ಮೂರ್ತಿ",
+          "phone": "",
+          "email": ""
         }
       ],
       "contacts": [
@@ -1017,6 +1069,68 @@
           "type": "facebook",
           "labelKey": "contact_facebook",
           "value": "bangaloredevelopmentauthority"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_helpline",
+          "value": "bda.helpline2025@gmail.com"
+        },
+        {
+          "type": "website",
+          "labelKey": "contact_website",
+          "value": "https://bdakarnataka.in/"
+        }
+      ],
+      "childDepartments": [
+        "bda_subdivision"
+      ]
+    },
+    "bda_subdivision": {
+      "nameKey": "dept_bda_subdivision",
+      "icon": "🏗️",
+      "group": "bda",
+      "websiteUrl": "https://bdakarnataka.in/",
+      "geodataUrl": "https://bdakarnataka.in/jurisdiction-map/",
+      "descriptionKey": "dept_bda_subdivision_desc",
+      "color": "#7c3aed",
+      "darkColor": "#ede9fe",
+      "parentDepartment": "bda",
+      "childDepartments": [
+        "bda_sector"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "+919483166622"
+        },
+        {
+          "type": "website",
+          "labelKey": "contact_website",
+          "value": "https://bdakarnataka.in/"
+        }
+      ]
+    },
+    "bda_sector": {
+      "nameKey": "dept_bda_sector",
+      "icon": "🏗️",
+      "group": "bda",
+      "websiteUrl": "https://bdakarnataka.in/",
+      "geodataUrl": "https://bdakarnataka.in/jurisdiction-map/",
+      "descriptionKey": "dept_bda_sector_desc",
+      "color": "#6d28d9",
+      "darkColor": "#f5f3ff",
+      "parentDepartment": "bda_subdivision",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "+919483166622"
+        },
+        {
+          "type": "website",
+          "labelKey": "contact_website",
+          "value": "https://bdakarnataka.in/"
         }
       ]
     },
@@ -1139,6 +1253,7 @@
       "color": "#8b5cf6",
       "darkColor": "#c4b5fd",
       "childDepartments": [
+        "bbmp_wards_old",
         "bbmp_wards"
       ],
       "contacts": [
@@ -1206,6 +1321,7 @@
       "showBoundaryNumber": true,
       "color": "#7c3aed",
       "darkColor": "#ddd6fe",
+      "parentDepartment": "bbmp_zone",
       "contacts": [
         {
           "type": "phone",

@@ -1,6 +1,5 @@
 {
   "blr_page_title": "BLR City Officials",
-
   "group_gba": "GBA",
   "group_bbmp": "BBMP (2008-2025)",
   "group_bescom": "BESCOM",
@@ -15,7 +14,6 @@
   "group_bda": "BDA",
   "group_pincode": "Pincode",
   "group_stamps": "Stamps & Registration",
-
   "dept_gba_corporation": "GBA Corporation",
   "dept_gba_zone": "GBA Zone",
   "dept_gba_division": "GBA Division",
@@ -36,7 +34,7 @@
   "dept_police_traffic_dcp": "DCP Traffic Zone",
   "dept_police_traffic_acp": "ACP Traffic Zone",
   "dept_police_traffic": "Traffic Police Station",
-  "dept_bda": "BDA",
+  "dept_bda": "BDA Zone",
   "dept_admin_district": "District",
   "dept_admin_taluk": "Taluk",
   "dept_admin_hobli": "Hobli",
@@ -46,7 +44,6 @@
   "dept_pincode": "Pincode",
   "dept_stamps_dro": "DRO",
   "dept_stamps_sro": "SRO",
-
   "dept_gba_corporation_fullform": "GBA (Greater Bengaluru Authority)",
   "dept_gba_corporation_desc": "GBA (Greater Bengaluru Authority) is the apex statutory body governing Greater Bengaluru, established in 2025 under the Greater Bengaluru Governance Act 2024. It replaced BBMP and coordinates civic administration across 5 city corporations spanning 712 km², overseeing urban planning, infrastructure, and inter-agency coordination.",
   "dept_gba_zone_desc": "Zones are the first administrative subdivision within each GBA corporation, each managed by a Zonal Commissioner. Zones coordinate civic services, infrastructure projects, and municipal enforcement across a cluster of divisions and wards.",
@@ -74,7 +71,7 @@
   "dept_police_traffic_acp_desc": "ACP (Assistant Commissioner of Police) Traffic zones are the intermediate administrative tier of Bengaluru Traffic Police, with 11 geographic zones each headed by an ACP. Each ACP zone oversees the traffic police stations within its area and reports to the respective DCP zone.",
   "dept_police_traffic_desc": "Bengaluru Traffic Police is a specialised wing of Bengaluru City Police responsible for managing road traffic, enforcing traffic rules, overseeing signal operations, and responding to accidents. It operates through 4 DCP zones, 11 ACP sub-zones, and over 45 traffic police stations across the city.",
   "dept_bda_fullform": "BDA (Bangalore Development Authority)",
-  "dept_bda_desc": "BDA (Bangalore Development Authority) is the statutory planning authority for the Bengaluru Metropolitan Area, operating under the Karnataka Town and Country Planning Act 1961. It prepares the Master Plan, acquires land, develops residential layouts and infrastructure in areas beyond GBA's direct jurisdiction, and regulates land use in the wider metropolitan region.",
+  "dept_bda_desc": "BDA (Bangalore Development Authority) is the statutory planning authority for the Bengaluru Metropolitan Area, operating under the Karnataka Town and Country Planning Act 1961. It prepares the Master Plan, acquires land, develops residential layouts and infrastructure in areas beyond GBA's direct jurisdiction, and regulates land use in the wider metropolitan region. The authority is divided into four zones — North, South, East and West — each headed by an Executive Engineer and a Revenue Officer.",
   "dept_admin_district_desc": "Revenue districts are headed by the Deputy Commissioner (DC), an IAS officer who is the principal administrative authority of the district. The DC oversees revenue collection, land records, law and order, disaster management, election administration, and coordination of state government schemes.",
   "dept_admin_taluk_desc": "Taluks are the primary subdivision of a district for revenue administration, each headed by a Tahsildar. The Tahsildar collects land revenue, maintains land records, issues income and caste certificates, processes land mutations, and resolves local revenue disputes.",
   "dept_admin_hobli_desc": "Hoblis are intermediate administrative units between the taluk and revenue village in Karnataka. Each hobli is a cluster of adjoining villages managed together for revenue administration, overseen by a Revenue Inspector who supervises village accountants.",
@@ -85,5 +82,9 @@
   "dept_stamps_dro_fullform": "DRO (District Registrar Office)",
   "dept_stamps_dro_desc": "DRO (District Registrar Office) supervises all Sub-Registrar Offices within a revenue district. The District Registrar oversees property registration quality, resolves appeals against sub-registrar decisions, handles high-value registrations, and reconciles stamp duty collections across the district.",
   "dept_stamps_sro_fullform": "SRO (Sub-Registrar Office)",
-  "dept_stamps_sro_desc": "SRO (Sub-Registrar Office) is the frontline office for property registration. Citizens register sale deeds, gift deeds, mortgages, leases, and other legal instruments here. The Sub-Registrar collects stamp duty and registration fees, verifies document compliance, and maintains the official register of property transactions."
+  "dept_stamps_sro_desc": "SRO (Sub-Registrar Office) is the frontline office for property registration. Citizens register sale deeds, gift deeds, mortgages, leases, and other legal instruments here. The Sub-Registrar collects stamp duty and registration fees, verifies document compliance, and maintains the official register of property transactions.",
+  "dept_bda_subdivision": "BDA Subdivision",
+  "dept_bda_subdivision_desc": "BDA subdivisions are the intermediate operational units within each BDA zone, each headed by an Assistant Executive Engineer (AEE). Subdivisions group multiple AE sectors and are responsible for engineering supervision, layout enforcement, and coordination with the zone-level Executive Engineer within BDA-developed areas.",
+  "dept_bda_sector": "BDA Sector",
+  "dept_bda_sector_desc": "BDA sectors are the smallest field-level units within each subdivision, each managed by an Assistant Engineer (AE). The AE handles day-to-day on-ground work including layout inspections, encroachment monitoring, and engineering tasks within their assigned sector of BDA jurisdiction."
 }
