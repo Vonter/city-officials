@@ -1,7 +1,5 @@
 import type { Map } from 'maplibre-gl';
 import { writable } from 'svelte/store';
-import { mount, unmount } from 'svelte';
-import BackgroundMenu from '../components/BackgroundMenu.svelte';
 
 export type BackgroundType = 'default' | 'satellite' | 'osm';
 
@@ -101,24 +99,4 @@ export function changeMapBackground(
   map.once('styledata', waitForStyle);
 
   map.setStyle(typeof style === 'string' ? style : (style as any));
-}
-
-export function createBackgroundControl(
-  onBackgroundChange: (background: BackgroundType) => void
-) {
-  const container = document.createElement('div');
-  container.className = 'maplibregl-ctrl';
-
-  const component = mount(BackgroundMenu as any, {
-    target: container,
-    props: { onchange: onBackgroundChange }
-  });
-
-  return {
-    onAdd: () => container,
-    onRemove: () => {
-      unmount(component);
-      container.parentNode?.removeChild(container);
-    }
-  };
 }

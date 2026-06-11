@@ -61,6 +61,16 @@
     :global(.maplibregl-ctrl-bottom-left) {
       display: none;
     }
+
+    :global(.maplibregl-map:fullscreen .map-layers-control) {
+      display: none;
+    }
+
+    /* Separate rule: a :-webkit-full-screen selector in the list above would
+       invalidate it in browsers that don't recognize the prefix */
+    :global(.maplibregl-map:-webkit-full-screen .map-layers-control) {
+      display: none;
+    }
   }
 
   @media (min-width: 768px) {

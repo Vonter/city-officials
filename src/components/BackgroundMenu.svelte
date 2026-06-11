@@ -4,6 +4,7 @@
     type BackgroundType,
     selectedBackgroundStore
   } from '../helpers/mapBackground';
+  import { mapControlButtonClass } from '../helpers/styleUtils';
   import Icon from './Icon.svelte';
 
   let { onchange }: { onchange: (bg: BackgroundType) => void } = $props();
@@ -36,13 +37,13 @@
 
 <svelte:document onclick={handleDocumentClick} />
 
-<div bind:this={containerEl} class="relative">
+<div bind:this={containerEl} class="relative map-layers-control">
   <button
     bind:this={buttonEl}
     onclick={toggle}
     type="button"
     aria-label="Select map background"
-    class="w-10 h-10 flex items-center justify-center bg-white text-gray-600 shadow-md rounded hover:bg-blue-50 hover:text-blue-500 focus:outline-none focus:ring focus:ring-blue-500"
+    class={mapControlButtonClass}
   >
     <Icon name="layers" class="w-4 h-4" />
   </button>
@@ -64,8 +65,8 @@
           onclick={() => select(option.id)}
           class={`w-full text-left px-3 py-2 text-sm flex items-center justify-between focus:outline-none transition-colors ${
             isSelected
-              ? 'text-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-blue-900/30'
-              : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-neutral-700/60'
+              ? 'text-blue-600 bg-blue-50 hover:!bg-blue-50 dark:text-blue-400 dark:bg-blue-900/30 dark:hover:!bg-blue-900/30'
+              : 'text-gray-700 dark:text-gray-300 hover:!bg-gray-50 dark:hover:!bg-neutral-700/60'
           }`}
         >
           <span>{option.label}</span>

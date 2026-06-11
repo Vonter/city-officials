@@ -21,11 +21,11 @@
   import { colors, getBoundaryColor } from '../helpers/colors';
   import { cityConfig } from '../configs/config';
   import {
-    createBackgroundControl,
     changeMapBackground,
     getDefaultBackgroundStyle,
     type BackgroundType
   } from '../helpers/mapBackground';
+  import { createMapControlGroup } from '../helpers/mapControls';
   import { wardLabelExpression } from '../helpers/mapLayers';
   import { scheduleIdle as scheduleIdleFn } from '../helpers/scheduling';
   import {
@@ -324,14 +324,16 @@
 
         scheduleIdleFn(() => styleBasemapLabels(map, _darkMode.current));
 
-        const backgroundControlTop = createBackgroundControl(
-          handleBackgroundChange
+        const controlGroupTop = createMapControlGroup(
+          handleBackgroundChange,
+          'vertical'
         );
-        const backgroundControlBottom = createBackgroundControl(
-          handleBackgroundChange
+        const controlGroupBottom = createMapControlGroup(
+          handleBackgroundChange,
+          'horizontal'
         );
-        map.addControl(backgroundControlTop, 'top-left');
-        map.addControl(backgroundControlBottom, 'bottom-left');
+        map.addControl(controlGroupTop, 'top-left');
+        map.addControl(controlGroupBottom, 'bottom-left');
 
         isMapReady.set(true);
       });
