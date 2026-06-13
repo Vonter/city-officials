@@ -223,6 +223,217 @@
         }
       ]
     },
+    "tneb_region": {
+      "nameKey": "dept_tneb_region",
+      "icon": "⚡",
+      "websiteUrl": "https://www.tnpdcl.org/",
+      "geodataUrl": "https://data.opencity.in/dataset/chennai-tneb-boundaries/resource/f78dca4b-34c5-43f2-8c56-09ac4ca7471b",
+      "descriptionKey": "dept_tneb_region_desc",
+      "color": "#d97706",
+      "darkColor": "#fde68a",
+      "childDepartments": [
+        "tneb_circle"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "9498794987"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "1912"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "TANGEDCO_Offcl"
+        }
+      ],
+      "commonOfficials": [
+        {
+          "designation": "Chairman cum Managing Director, TNPDCL",
+          "designationRegional": "தலைவர் மற்றும் நிர்வாக இயக்குநர்",
+          "name": "Dr. J. Radhakrishnan",
+          "nameRegional": "டாக்டர் ஜெ. ராதாகிருஷ்ணன்",
+          "phone": "",
+          "email": "chairman@tnebnet.org"
+        }
+      ]
+    },
+    "tneb_circle": {
+      "nameKey": "dept_tneb_circle",
+      "icon": "⚡",
+      "websiteUrl": "https://www.tnpdcl.org/",
+      "geodataUrl": "https://data.opencity.in/dataset/chennai-tneb-boundaries/resource/0f1f2bf8-43d0-4a24-84e5-20f944167380",
+      "descriptionKey": "dept_tneb_circle_desc",
+      "color": "#d97706",
+      "darkColor": "#fde68a",
+      "parentDepartment": "tneb_region",
+      "childDepartments": [
+        "tneb_division"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "9498794987"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "1912"
+        }
+      ]
+    },
+    "tneb_division": {
+      "nameKey": "dept_tneb_division",
+      "icon": "⚡",
+      "websiteUrl": "https://www.tnpdcl.org/",
+      "geodataUrl": "https://data.opencity.in/dataset/chennai-tneb-boundaries/resource/6db3c13f-3366-448f-9599-1d09ff8f28d7",
+      "descriptionKey": "dept_tneb_division_desc",
+      "color": "#d97706",
+      "darkColor": "#fde68a",
+      "parentDepartment": "tneb_circle",
+      "childDepartments": [
+        "tneb_subdivision"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "9498794987"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "1912"
+        }
+      ]
+    },
+    "tneb_subdivision": {
+      "nameKey": "dept_tneb_subdivision",
+      "icon": "⚡",
+      "websiteUrl": "https://www.tnpdcl.org/",
+      "geodataUrl": "https://data.opencity.in/dataset/chennai-tneb-boundaries/resource/bcef740d-c21b-434e-9f93-4410024ebd9b",
+      "descriptionKey": "dept_tneb_subdivision_desc",
+      "color": "#d97706",
+      "darkColor": "#fde68a",
+      "parentDepartment": "tneb_division",
+      "childDepartments": [
+        "tneb_section"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "9498794987"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "1912"
+        }
+      ]
+    },
+    "tneb_section": {
+      "nameKey": "dept_tneb_section",
+      "icon": "⚡",
+      "websiteUrl": "https://www.tnpdcl.org/",
+      "geodataUrl": "https://data.opencity.in/dataset/chennai-tneb-boundaries/resource/1013399c-fd78-43d9-a39c-9a6bd7327ca1",
+      "descriptionKey": "dept_tneb_section_desc",
+      "color": "#d97706",
+      "darkColor": "#fde68a",
+      "parentDepartment": "tneb_subdivision",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "9498794987"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "1912"
+        }
+      ]
+    },
+    "police_commissionerate": {
+      "nameKey": "dept_police_commissionerate",
+      "icon": "👮",
+      "group": "police_city",
+      "websiteUrl": "https://www.police.tn.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/chennai-police-jurisdictions/resource/6a7ce9d3-0930-4647-a0ae-99ad00b5db0e",
+      "descriptionKey": "dept_police_commissionerate_desc",
+      "color": "#dc2626",
+      "darkColor": "#fca5a5",
+      "childDepartments": [
+        "police_city"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "100"
+        },
+        {
+          "type": "phone",
+          "labelKey": "contact_other",
+          "value": "112"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "chennaipolice_"
+        }
+      ]
+    },
+    "police_city": {
+      "nameKey": "dept_police_city",
+      "icon": "👮",
+      "group": "police_city",
+      "parentDepartment": "police_commissionerate",
+      "websiteUrl": "https://www.police.tn.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/chennai-police-jurisdictions/resource/6a7ce9d3-0930-4647-a0ae-99ad00b5db0e",
+      "descriptionKey": "dept_police_city_desc",
+      "color": "#dc2626",
+      "darkColor": "#fca5a5",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "100"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "chennaipolice_"
+        }
+      ]
+    },
+    "police_traffic": {
+      "nameKey": "dept_police_traffic",
+      "icon": "🚔",
+      "group": "police_traffic",
+      "websiteUrl": "https://www.police.tn.gov.in/",
+      "geodataUrl": "https://data.opencity.in/dataset/chennai-police-jurisdictions/resource/14c3bedd-bb59-49ed-ab80-c5fb93fafcd6",
+      "descriptionKey": "dept_police_traffic_desc",
+      "color": "#be123c",
+      "darkColor": "#fda4af",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "103"
+        },
+        {
+          "type": "twitter",
+          "labelKey": "contact_twitter",
+          "value": "ChennaiTraffic"
+        }
+      ]
+    },
     "election_ac": {
       "nameKey": "dept_election_ac",
       "icon": "🗳️",
