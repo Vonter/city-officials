@@ -1,0 +1,15 @@
+{
+  "vizag_page_title": "Vizag City Officials",
+
+  "group_vizag": "GVMC",
+
+  "dept_vizag_corporation": "Corporation",
+  "dept_vizag_corporation_fullform": "GVMC (Greater Visakhapatnam Municipal Corporation)",
+  "dept_vizag_corporation_desc": "GVMC (Greater Visakhapatnam Municipal Corporation) is the civic body responsible for the administration of Visakhapatnam city. It is divided into 10 administrative zones and 98 wards. GVMC provides essential services including water supply, sanitation, roads, street lighting, and building approvals.",
+
+  "dept_vizag_corp_zone": "Zone",
+  "dept_vizag_corp_zone_desc": "Administrative zones within GVMC, each managed by a Deputy Commissioner. Visakhapatnam has 10 zones — Bheemunipatnam, Madhurawada, East, North, South, West, Pendurthi, Gajuwaka, Aganampudi, and Anakapalli.",
+
+  "dept_vizag_corp_ward": "Ward",
+  "dept_vizag_corp_ward_desc": "Individual wards, the basic unit of local representation with elected ward corporators. GVMC has 98 wards across its 10 zones."
+}

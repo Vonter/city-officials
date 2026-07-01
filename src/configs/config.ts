@@ -7,6 +7,7 @@ import chennaiConfigData from './chennai.json';
 import kolkataConfigData from './kolkata.json';
 import hydConfigData from './hyd.json';
 import delhiConfigData from './delhi.json';
+import vizagConfigData from './vizag.json';
 
 import sharedEn from '../assets/locales/shared/en.json';
 import sharedKn from '../assets/locales/shared/kn.json';
@@ -37,6 +38,9 @@ import hydTe from '../assets/locales/hyd/te.json';
 import delhiEn from '../assets/locales/delhi/en.json';
 import delhiHi from '../assets/locales/delhi/hi.json';
 
+import vizagEn from '../assets/locales/vizag/en.json';
+import vizagTe from '../assets/locales/vizag/te.json';
+
 const CITY = import.meta.env['VITE_CITY'];
 
 export const isAllCitiesMode = CITY === 'all';
@@ -48,7 +52,8 @@ export const allCityConfigs: Record<string, CityConfig> = {
   chennai: chennaiConfigData as unknown as CityConfig,
   kolkata: kolkataConfigData as unknown as CityConfig,
   hyd: hydConfigData as unknown as CityConfig,
-  delhi: delhiConfigData as unknown as CityConfig
+  delhi: delhiConfigData as unknown as CityConfig,
+  vizag: vizagConfigData as unknown as CityConfig
 };
 
 export const allCityIds = Object.keys(allCityConfigs);
@@ -63,7 +68,8 @@ const allCityLocaleData: Record<
   chennai: { en: chennaiEn, ta: chennaiTa },
   kolkata: { en: kolkataEn, bn: kolkataBn },
   hyd: { en: hydEn, te: hydTe },
-  delhi: { en: delhiEn, hi: delhiHi }
+  delhi: { en: delhiEn, hi: delhiHi },
+  vizag: { en: vizagEn, te: vizagTe }
 };
 
 const sharedLocales: Record<string, Partial<LocaleStrings>> = {
@@ -85,6 +91,7 @@ function getInitialConfig(): CityConfig {
   if (CITY === 'kolkata') return kolkataConfigData as unknown as CityConfig;
   if (CITY === 'hyd') return hydConfigData as unknown as CityConfig;
   if (CITY === 'delhi') return delhiConfigData as unknown as CityConfig;
+  if (CITY === 'vizag') return vizagConfigData as unknown as CityConfig;
   return blrConfigData as unknown as CityConfig;
 }
 
@@ -99,6 +106,7 @@ function getCityLocales(
   if (CITY === 'kolkata') return { en: kolkataEn, bn: kolkataBn };
   if (CITY === 'hyd') return { en: hydEn, te: hydTe };
   if (CITY === 'delhi') return { en: delhiEn, hi: delhiHi };
+  if (CITY === 'vizag') return { en: vizagEn, te: vizagTe };
   return { en: blrEn, kn: blrKn };
 }
 

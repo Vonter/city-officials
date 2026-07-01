@@ -25,6 +25,7 @@ case "$CITY" in
   kolkata) BBOX="" ;;
   mumbai)  BBOX="72.3 18.6 73.5 19.6" ;;
   pune)    BBOX="73.3 17.85 75.2 19.4" ;;
+  vizag)   BBOX="82.99440736 17.54647477 83.46370155 17.94043904" ;;
   *)       echo "Error: unknown city '${CITY}'" >&2; exit 1 ;;
 esac
 
