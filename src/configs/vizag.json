@@ -1,0 +1,97 @@
+{
+  "cityId": "vizag",
+  "pageTitleKey": "vizag_page_title",
+  "logo": "/icons/vizag.png",
+  "supportedLanguages": [
+    {
+      "code": "en",
+      "nameKey": "lang_english"
+    },
+    {
+      "code": "te",
+      "nameKey": "lang_telugu"
+    }
+  ],
+  "map": {
+    "defaultZoom": 10.5,
+    "defaultCenter": [83.2185, 17.6869],
+    "maxBounds": [
+      [82.8, 17.3],
+      [83.6, 18.1]
+    ]
+  },
+  "seo": {
+    "title": "Vizag City Officials",
+    "description": "Find your local ward, zone and officials in Visakhapatnam (GVMC).",
+    "keywords": "vizag,visakhapatnam,gvmc,boundaries,wards,zones,officials,andhra pradesh",
+    "author": "City Officials",
+    "baseUrl": "https://cityofficials.bengawalk.com/vizag",
+    "image": "https://cityofficials.bengawalk.com/sharecard.jpg"
+  },
+  "overlapRenderDepartment": "vizag_corp_ward",
+  "departments": {
+    "vizag_corporation": {
+      "nameKey": "dept_vizag_corporation",
+      "icon": "🏤",
+      "websiteUrl": "https://www.gvmc.gov.in",
+      "geodataUrl": "https://www.gvmc.gov.in",
+      "descriptionKey": "dept_vizag_corporation_desc",
+      "color": "#0ea5e9",
+      "darkColor": "#7dd3fc",
+      "childDepartments": [
+        "vizag_corp_zone"
+      ],
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1800-4250-0009"
+        },
+        {
+          "type": "whatsapp",
+          "labelKey": "contact_whatsapp",
+          "value": "9666909192"
+        },
+        {
+          "type": "email",
+          "labelKey": "contact_email",
+          "value": "commissioner_gvmc@yahoo.co.in",
+          "name": "Commissioner",
+          "regionalName": "కమీషనర్"
+        },
+        {
+          "type": "website",
+          "labelKey": "contact_website",
+          "value": "https://www.gvmc.gov.in"
+        }
+      ]
+    },
+    "vizag_corp_zone": {
+      "nameKey": "dept_vizag_corp_zone",
+      "icon": "🗺️",
+      "websiteUrl": "https://www.gvmc.gov.in",
+      "geodataUrl": "https://www.gvmc.gov.in",
+      "descriptionKey": "dept_vizag_corp_zone_desc",
+      "parentDepartment": "vizag_corporation",
+      "childDepartments": [
+        "vizag_corp_ward"
+      ],
+      "color": "#38bdf8",
+      "darkColor": "#7dd3fc",
+      "contacts": []
+    },
+    "vizag_corp_ward": {
+      "nameKey": "dept_vizag_corp_ward",
+      "icon": "📍",
+      "websiteUrl": "https://www.gvmc.gov.in",
+      "geodataUrl": "https://www.gvmc.gov.in",
+      "descriptionKey": "dept_vizag_corp_ward_desc",
+      "parentDepartment": "vizag_corp_zone",
+      "showBoundaryNumber": true,
+      "sortBy": "boundaryNumber",
+      "color": "#0ea5e9",
+      "darkColor": "#7dd3fc",
+      "contacts": []
+    }
+  }
+}

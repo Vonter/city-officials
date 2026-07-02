@@ -10,7 +10,8 @@
     chennai: 'Chennai',
     kolkata: 'Kolkata',
     hyd: 'Hyderabad',
-    delhi: 'Delhi'
+    delhi: 'Delhi',
+    vizag: 'Vizag'
   };
 
   const cities = allCityIds
