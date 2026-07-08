@@ -1,8 +1,3 @@
-build
-.env
-scripts/**/__pycache__/
-scripts/**/*.geojson
-
 # Logs
 logs
 *.log
@@ -29,3 +24,11 @@ dist-ssr
 *.sw?
 /.svelte-kit
 .wrangler
+
+# Other
+
+debug/**
+build
+.env
+scripts/**/__pycache__/
+scripts/**/*.geojson
