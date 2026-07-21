@@ -63,6 +63,10 @@ export function findPolylabel(feature: Feature) {
 }
 
 export function getWardName(namecol: string): string {
+  // "151-419: Name" (AC-Part polling station code) → "Name"
+  const psCodeMatch = namecol.match(/^(\d+-\d+):\s*(.+)$/);
+  if (psCodeMatch) return psCodeMatch[2];
+
   // "123: Name" → "Name"
   const colonMatch = namecol.match(/^(\d+):\s*(.+)$/);
   if (colonMatch) return colonMatch[2];
@@ -79,6 +83,10 @@ export function getWardName(namecol: string): string {
 }
 
 export function getBoundaryNumber(namecol: string): string {
+  // "151-419: Name" (AC-Part polling station code) → "151-419"
+  const psCodeMatch = namecol.match(/^(\d+-\d+):\s*.+$/);
+  if (psCodeMatch) return psCodeMatch[1];
+
   const colonMatch = namecol.match(/^(\d+)\s*[A-Za-z]?\s*:\s*.+$/);
   if (colonMatch) return colonMatch[1];
 
@@ -101,9 +109,12 @@ export function sortedDistricts(
 ): Feature[] {
   if (sortBy === 'boundaryNumber') {
     return features.sort((a, b) => {
-      const aNum = parseInt(a.properties?.['boundaryNumber'] || '0', 10) || 0;
-      const bNum = parseInt(b.properties?.['boundaryNumber'] || '0', 10) || 0;
-      if (aNum !== bNum) return aNum - bNum;
+      // Numeric-aware compare handles both plain ("1" < "2" < "10") and
+      // composite AC-Part codes ("150-1" < "151-42" < "151-419").
+      const aNum = a.properties?.['boundaryNumber'] || '';
+      const bNum = b.properties?.['boundaryNumber'] || '';
+      const numCmp = aNum.localeCompare(bNum, undefined, { numeric: true });
+      if (numCmp !== 0) return numCmp;
       const aName =
         a.properties?.['wardName'] || a.properties?.['namecol'] || '';
       const bName =
@@ -193,14 +204,23 @@ export function getOfficialDetails(
     return officialDetailsCache.get(cacheKey)!;
   }
 
-  const matchingOfficials = officials.filter(official => {
-    return (
-      official.Department.toLowerCase() === boundaryId.toLowerCase() &&
-      official.Area.toLowerCase() === districtId.toLowerCase()
-    );
-  });
-
   const dept = cityConfig.departments[boundaryId];
+
+  // Some departments key officials by the boundary number rather than the full
+  // area name (e.g. polling booths matched only on their "AC-Part" PSCode).
+  const areaKey = dept?.matchByBoundaryNumber
+    ? getBoundaryNumber(districtId)
+    : districtId;
+
+  const matchingOfficials = areaKey
+    ? officials.filter(official => {
+        return (
+          official.Department.toLowerCase() === boundaryId.toLowerCase() &&
+          official.Area.toLowerCase() === areaKey.toLowerCase()
+        );
+      })
+    : [];
+
   if (dept?.commonOfficials) {
     const mapped = dept.commonOfficials.map(o => ({
       Department: boundaryId,

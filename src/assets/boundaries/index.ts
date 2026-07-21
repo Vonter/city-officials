@@ -41,7 +41,8 @@ function generateLayers(): ILayers {
       commonOfficials: dept.commonOfficials,
       showBoundaryNumber: dept.showBoundaryNumber,
       sortBy: dept.sortBy,
-      showWebsite: dept.showWebsite
+      showWebsite: dept.showWebsite,
+      sidebarLast: dept.sidebarLast
     };
   });
 

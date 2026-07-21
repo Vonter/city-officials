@@ -55,7 +55,13 @@
       }
     }
 
-    return [...groupOrderMap.values()];
+    const groups = [...groupOrderMap.values()];
+    const isLast = (g: DepartmentGroup) =>
+      g.keys.some(key => layers[key]?.sidebarLast);
+    return [
+      ...groups.filter(g => !isLast(g)),
+      ...groups.filter(g => isLast(g))
+    ];
   });
 </script>
 

@@ -61,6 +61,8 @@ export interface DepartmentConfig {
   sortBy?: 'boundaryNumber' | 'wardName';
   showWebsite?: boolean;
   sources?: string[];
+  sidebarLast?: boolean;
+  matchByBoundaryNumber?: boolean;
 }
 
 export interface OfficeLocation {
@@ -112,4 +114,5 @@ export interface ILayer {
   showBoundaryNumber?: boolean;
   sortBy?: 'boundaryNumber' | 'wardName';
   showWebsite?: boolean;
+  sidebarLast?: boolean;
 }

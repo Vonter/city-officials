@@ -14,6 +14,7 @@
   "group_bda": "BDA",
   "group_pincode": "Pincode",
   "group_stamps": "Stamps & Registration",
+  "group_polling": "SIR (Polling Booth)",
   "dept_gba_corporation": "GBA Corporation",
   "dept_gba_zone": "GBA Zone",
   "dept_gba_division": "GBA Division",
@@ -44,6 +45,8 @@
   "dept_pincode": "Pincode",
   "dept_stamps_dro": "DRO",
   "dept_stamps_sro": "SRO",
+  "dept_stamps_aro": "ARO",
+  "dept_polling_booth": "SIR (Polling Booth)",
   "dept_gba_corporation_fullform": "GBA (Greater Bengaluru Authority)",
   "dept_gba_corporation_desc": "GBA (Greater Bengaluru Authority) is the apex statutory body governing Greater Bengaluru, established in 2025 under the Greater Bengaluru Governance Act 2024. It replaced BBMP and coordinates civic administration across 5 city corporations spanning 712 km², overseeing urban planning, infrastructure, and inter-agency coordination.",
   "dept_gba_zone_desc": "Zones are the first administrative subdivision within each GBA corporation, each managed by a Zonal Commissioner. Zones coordinate civic services, infrastructure projects, and municipal enforcement across a cluster of divisions and wards.",
@@ -86,5 +89,8 @@
   "dept_bda_subdivision": "BDA Subdivision",
   "dept_bda_subdivision_desc": "BDA subdivisions are the intermediate operational units within each BDA zone, each headed by an Assistant Executive Engineer (AEE). Subdivisions group multiple AE sectors and are responsible for engineering supervision, layout enforcement, and coordination with the zone-level Executive Engineer within BDA-developed areas.",
   "dept_bda_sector": "BDA Sector",
-  "dept_bda_sector_desc": "BDA sectors are the smallest field-level units within each subdivision, each managed by an Assistant Engineer (AE). The AE handles day-to-day on-ground work including layout inspections, encroachment monitoring, and engineering tasks within their assigned sector of BDA jurisdiction."
+  "dept_bda_sector_desc": "BDA sectors are the smallest field-level units within each subdivision, each managed by an Assistant Engineer (AE). The AE handles day-to-day on-ground work including layout inspections, encroachment monitoring, and engineering tasks within their assigned sector of BDA jurisdiction.",
+  "dept_stamps_aro_fullform": "ARO (Assistant Registration Officer)",
+  "dept_stamps_aro_desc": "ARO (Assistant Registration Officer) sub-divisions are the field-level units below the Sub-Registrar Office. Each ARO area, mapped to a Greater Bengaluru corporation sub-division, supports property registration, roll revision, and citizen verification work for its locality, reporting up through the SRO and DRO.",
+  "dept_polling_booth_desc": "Polling booths (polling stations) are the basic units of election administration. Each booth serves the voters of a defined area within an assembly constituency and is managed on poll day by a Presiding Officer. A Booth Level Officer (BLO) is the point of contact for voter registration, roll corrections, and verification for the booth's electors."
 }

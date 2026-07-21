@@ -39,6 +39,26 @@
   },
   "overlapRenderDepartment": "gba_ward",
   "departments": {
+    "polling_booth": {
+      "nameKey": "dept_polling_booth",
+      "icon": "🗳️",
+      "sidebarLast": true,
+      "showBoundaryNumber": true,
+      "matchByBoundaryNumber": true,
+      "sortBy": "boundaryNumber",
+      "websiteUrl": "https://voters.eci.gov.in/",
+      "geodataUrl": "https://geo.bbmp.gov.in/",
+      "descriptionKey": "dept_polling_booth_desc",
+      "color": "#0d9488",
+      "darkColor": "#5eead4",
+      "contacts": [
+        {
+          "type": "phone",
+          "labelKey": "contact_helpline",
+          "value": "1950"
+        }
+      ]
+    },
     "gba_corporation": {
       "nameKey": "dept_gba_corporation",
       "icon": "🏤",
@@ -1242,6 +1262,20 @@
       "color": "#6b7280",
       "darkColor": "#d1d5db",
       "parentDepartment": "stamps_dro",
+      "childDepartments": [
+        "stamps_aro"
+      ],
+      "contacts": []
+    },
+    "stamps_aro": {
+      "nameKey": "dept_stamps_aro",
+      "icon": "📝",
+      "websiteUrl": "https://ceo.karnataka.gov.in/",
+      "geodataUrl": "https://geo.bbmp.gov.in/",
+      "descriptionKey": "dept_stamps_aro_desc",
+      "color": "#9ca3af",
+      "darkColor": "#e5e7eb",
+      "parentDepartment": "stamps_sro",
       "contacts": []
     },
     "bbmp_zone": {

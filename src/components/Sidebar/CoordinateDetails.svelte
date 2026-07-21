@@ -1,5 +1,6 @@
 <script lang="ts">
   import { untrack } from 'svelte';
+  import { _, locale } from 'svelte-i18n';
   import { fromStore } from 'svelte/store';
   import SidebarHeader from './SidebarHeader.svelte';
   import {
@@ -7,26 +8,68 @@
     addressMarker,
     coordinatesMarker,
     selectedCoordinates,
-    allBoundaries
+    allBoundaries,
+    officialsData
   } from '../../stores';
   import OverlapList from './OverlapList.svelte';
+  import OfficialCard from './OfficialCard.svelte';
   import type { Feature } from 'geojson';
   import type { LngLat } from 'maplibre-gl';
   import maplibregl from 'maplibre-gl';
-  import { resetZoom } from '../../helpers/helpers';
+  import { getOfficialDetails, resetZoom } from '../../helpers/helpers';
+  import { getLocalizedDistrictName } from '../../helpers/districtDisplay';
+  import { layers } from '../../assets/boundaries';
   import PolygonLookup from 'polygon-lookup';
   import { api } from '../../helpers/api';
   import ShareButton from '../ShareButton.svelte';
 
+  const BLO_DEPARTMENT = 'polling_booth';
+
+  const t = fromStore(_);
+  const loc = fromStore(locale);
   const coords$ = fromStore(selectedCoordinates);
   const map$ = fromStore(mapStore);
   const addrMarker$ = fromStore(addressMarker);
   const coordMarker$ = fromStore(coordinatesMarker);
   const boundaries$ = fromStore(allBoundaries);
+  const officials$ = fromStore(officialsData);
 
   let districtsIntersectingAddress: Feature[] = $state([]);
   let isLoading = $state(false);
   let lookup: any = null;
+
+  const boothFeature = $derived(
+    districtsIntersectingAddress.find(
+      d => d.properties?.['id'] === BLO_DEPARTMENT
+    ) ?? null
+  );
+
+  const boothName = $derived(
+    boothFeature
+      ? getLocalizedDistrictName(
+          BLO_DEPARTMENT,
+          boothFeature.properties?.['namecol'],
+          officials$.current,
+          loc.current
+        )
+      : ''
+  );
+
+  const bloOfficial = $derived.by(() => {
+    if (!boothFeature) return null;
+    const officials = getOfficialDetails(
+      BLO_DEPARTMENT,
+      boothFeature.properties?.['namecol'],
+      officials$.current
+    );
+    return officials && officials.length > 0 ? officials[0] : null;
+  });
+
+  const overlapDistricts = $derived(
+    districtsIntersectingAddress.filter(
+      d => d.properties?.['id'] !== BLO_DEPARTMENT
+    )
+  );
 
   let prevAllBoundariesRef: any = null;
 
@@ -124,8 +167,24 @@
     <ShareButton title={getCoordinateTitle(coords$.current)} />
   {/snippet}
 </SidebarHeader>
+{#if coords$.current && boothFeature}
+  <div class="px-4 pt-3">
+    <div class="flex items-center gap-2 mb-2">
+      <span>{layers[BLO_DEPARTMENT]?.icon}</span>
+      <span class="text-sm font-medium text-gray-900 dark:text-gray-100">
+        {t.current(layers[BLO_DEPARTMENT]?.nameKey || '')}
+      </span>
+    </div>
+    <div class="text-sm text-gray-700 dark:text-gray-300 mb-2 px-1">
+      {boothName}
+    </div>
+    {#if bloOfficial}
+      <OfficialCard official={bloOfficial} locale={loc.current} />
+    {/if}
+  </div>
+{/if}
 <div class="py-2">
   {#if coords$.current}
-    <OverlapList districts={districtsIntersectingAddress} {isLoading} />
+    <OverlapList districts={overlapDistricts} {isLoading} />
   {/if}
 </div>
